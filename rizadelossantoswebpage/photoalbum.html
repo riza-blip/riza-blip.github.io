@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 104, 99, 0.842);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            background-color: white;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header nav {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .header img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .header a:hover {
+            color: rgb(243, 7, 7);
+        }
+        .header nav {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Hidden by default */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        /* Dropdown links */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color on hover */
+        .dropdown-content a:hover {
+            background-color: rgba(0, 104, 99, 0.842);
+            color: white;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Buttons Container */
+        .buttons-container {
+            position: fixed;
+            top: 80px; /* Just below the header */
+            left: 0;
+            width: 200px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons-container button {
+            background-color: rgb(0, 104, 99);
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .buttons-container button:hover {
+            background-color: rgb(243, 7, 7);
+        }
+
+        .caption-title {
+            text-align: center;
+            font-size: 50px; /* Adjust the size as needed */
+            font-weight: bold;
+            margin: 20px 0;
+            color: rgb(255, 255, 255);
+            font-family: 'Wendy One', sans-serif; /* Apply Wendy One font */
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1;
+            padding: 20px;
+            margin-left: 220px; /* Adjust content to make room for sidebar */
+        }
+
+        .photo-album {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .photo-item {
+            width: 70%;
+            height: 70%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            aspect-ratio: 1;
+            margin: 0 auto;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.6);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border-radius: 0 0 8px 8px;
+            opacity: 1; /* Always visible */
+            transition: none; /* Remove transition */
+        }
+
+        
+        .dropdown-label {
+            margin: 0 20px;
+            font-weight: bold;
+            color: black;
+        }
+        .footer {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .footer .icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+            <img src="bagapics/logobaga.png" alt="Baga Burger Logo">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+
+            <!-- Dropdown for Business (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">Business</span>
+                <div class="dropdown-content">
+                    <a href="history.html">History</a>
+                    <a href="mission.html">Mission</a>
+                    <a href="vision.html">Vision</a>
+                </div>
+            </div>
+
+            <a href="magazine.html">Magazine</a>
+
+            <!-- Dropdown for About Me -->
+            <div class="dropdown">
+                <a href="aboutme.html">About Me</a>
+                <div class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="photoalbum.html">Photo Album</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for UM (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">UM</span>
+                <div class="dropdown-content">
+                    <a href="umhistory.html">History</a>
+                    <a href="ummission.html">Mission</a>
+                    <a href="umvision.html">Vision</a>
+                    <a href="ummotto.html">Motto</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for CS (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">CS</span>
+                <div class="dropdown-content">
+                    <a href="cshistory.html">CS History</a>
+                    <a href="csmission.html">CS Mission</a>
+                    <a href="csvision.html">CS Vision</a>
+                    <a href="csobjective.html">CS Objective</a>
+                    <a href="csprof.html">CS Prof</a>
+                    <a href="csevent.html">CS Event</a>
+                </div>
+            </div>
+
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+
+    <!-- Buttons Container below header -->
+    <div class="buttons-container">
+        <button onclick="filterPhotos('all')">All Photos</button>
+        <button onclick="filterPhotos('friends')">Friends</button>
+        <button onclick="filterPhotos('family')">Family</button>
+    </div>
+
+    <!-- Caption at the top center -->
+    <div class="caption-title">MY PHOTO ALBUM</div>
+
+    <div class="content">
+        <div class="photo-album" id="photo-album">
+            <div class="photo-item" data-category="family">
+                <img src="webpics/completefam.jpg" alt="Photo 1">
+                <div class="caption">Back when we were still complete💔</div>
+            </div>
+            <div class="photo-item" data-category="family">
+                <img src="webpics/butterfly.jpg" alt="Photo 2">
+                <div class="caption">Butterfly that landed before Papa was buried. 🦋</div>
+            </div>
+            <div class="photo-item" data-category="family">
+                <img src="webpics/nowthree.jpg" alt="Photo 3">
+                <div class="caption">now three, but we will forever carry Papa's love that keeps us complete.☁️</div>
+            </div>
+            <div class="photo-item" data-category="friends">
+                <img src="webpics/cristine&i.jpg" alt="Photo 4">
+                <div class="caption">Making waves and memories with my bestie 🌊</div>
+            </div>
+            <div class="photo-item" data-category="friends">
+                <img src="webpics/lala4.jpg" alt="Photo 5">
+                <div class="caption">Elementary school to forever friends—our bond just keeps growing stronger 📚❤️</div>
+            </div>
+            <div class="photo-item" data-category="friends">
+                <img src="webpics/mayagelay.jpg" alt="Photo 6">
+                <div class="caption">My friends who are more like sisters—forever my ride-or-die crew 🌟👯‍♀️</div>
+            </div>
+            <div class="photo-item" data-category="friends">
+                <img src="webpics/catholicyouth.jpg" alt="Photo 7">
+                <div class="caption">Together in faith, united in friendship—my Catholic youth family 🌟❤️ </div>
+            </div>
+            <div class="photo-item" data-category="friends">
+                <img src="webpics/friendssurigao.jpg" alt="Photo 8">
+                <div class="caption">Cherishing every moment with my girls in Surigao🌺💕</div>
+            </div>
+            <div class="photo-item" data-category="friends">
+                <img src="webpics/nyatik.jpg" alt="Photo 9">
+                <div class="caption">Making memories and chasing dreams with my favorite college friends  🎓📚</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterPhotos(category) {
+            const photos = document.querySelectorAll('.photo-item');
+            photos.forEach(photo => {
+                if (category === 'all' || photo.getAttribute('data-category') === category) {
+                    photo.style.display = 'block';
+                } else {
+                    photo.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <div class="footer">
+        <p>For More Questions</p>
+        <p><span class="icon">✉</span><a href="mailto:rizadelossantos0714@gmail.com">rizadelossantos0714@gmail.com</a></p>
+        <p><span class="icon">☎</span>09075044166</p>
+        <p><span class="icon">☗</span>16c Rd1, Novaliches, Caloocan, Metro Manila, Philippines.</p>
+        <p>© 2024 BagaBurger. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

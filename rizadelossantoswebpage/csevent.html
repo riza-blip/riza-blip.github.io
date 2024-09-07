@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(232, 252, 255);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            background-color: white;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            width: 40px; /* Adjust the size of the logo */
+            height: auto;
+            margin-right: 10px; /* Space between image and "Home" */
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        .header a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .gallery-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #ddd; /* Border color for the frame */
+            border-radius: 8px; /* Rounded corners for the frame */
+            padding: 10px; /* Space between border and image */
+            background-color: rgb(149, 211, 240); /* Background color inside the frame */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px; /* Rounded corners for the image */
+            display: block;
+        }
+
+        .gallery-item p {
+            margin-top: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: black; /* Text color for the caption */
+            font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', serif; /* Updated to use Palatino */
+            font-size: 30px;
+        }
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(243, 7, 7);
+            color: white;
+        }
+
+        /* Show the dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-label {
+            margin: 0 20px;
+            font-weight: bold;
+            color: black;
+        }
+        .footer {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .footer .icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+            <img src="bagapics/logobaga.png" alt="Baga Burger Logo">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+
+            <!-- Dropdown for Business (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">Business</span>
+                <div class="dropdown-content">
+                    <a href="history.html">History</a>
+                    <a href="mission.html">Mission</a>
+                    <a href="vision.html">Vision</a>
+                </div>
+            </div>
+
+            <a href="magazine.html">Magazine</a>
+
+            <!-- Dropdown for About Me -->
+            <div class="dropdown">
+                <a href="aboutme.html">About Me</a>
+                <div class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="photoalbum.html">Photo Album</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for UM (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">UM</span>
+                <div class="dropdown-content">
+                    <a href="umhistory.html">History</a>
+                    <a href="ummission.html">Mission</a>
+                    <a href="umvision.html">Vision</a>
+                    <a href="ummotto.html">Motto</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for CS (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">CS</span>
+                <div class="dropdown-content">
+                    <a href="cshistory.html">CS History</a>
+                    <a href="csmission.html">CS Mission</a>
+                    <a href="csvision.html">CS Vision</a>
+                    <a href="csobjective.html">CS Objective</a>
+                    <a href="csprof.html">CS Prof</a>
+                    <a href="csevent.html">CS Event</a>
+                </div>
+            </div>
+
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="gallery">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item">
+                <img src="webpics/sportf.jpg" alt="Description of Image 1">
+                <p>SportFest </p>
+            </div>
+
+            
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item">
+                <img src="webpics/acqui.jpg" alt="Description of Image 3">
+                <p>Acquaintance Party </p>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item">
+                <img src="webpics/gotchamp.jpg" alt="Description of Image 4">
+                <p>CS Got Talent </p>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item">
+                <img src="webpics/valentines.jpg" alt="Description of Image 5">
+                <p>Sayawit/Valentines Event</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="webpics/sportfestvolley.jpg" alt="Description of Image 5">
+                <p>First Year Volleyball</p>
+            </div>
+            
+
+           
+        </div>
+    </div>
+    <div class="footer">
+        <p>For More Questions</p>
+        <p><span class="icon">✉</span><a href="mailto:umregister@yahoo.com">umregister@yahoo.com</a></p>
+        <p><span class="icon">☎</span>09075044166</p>
+        <p><span class="icon">☗</span>546 Delos Santos St, 403, Manila,1008 Metro Manila, Philippines.</p>
+        <p>© 2024 University of Manila. All Rights Reserved.</p>
+
+        
+    </div>
+</body>
+</html>
