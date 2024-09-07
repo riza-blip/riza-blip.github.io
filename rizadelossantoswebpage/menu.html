@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            background-color: white;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        .header a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1c1c1c;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .gallery-item p {
+            margin-top: 10px;
+            font-family: Impact, Charcoal, sans-serif;
+            font-size: 20px;
+            color: rgb(253, 253, 253); /* Price color */
+        }
+
+        .gallery-item .description {
+            margin-top: 5px;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(243, 7, 7);
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-label {
+            margin: 0 20px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .footer {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .footer .icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+            <img src="bagapics/logobaga.png" alt="Baga Burger Logo">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+
+            <div class="dropdown">
+                <span class="dropdown-label">Business</span>
+                <div class="dropdown-content">
+                    <a href="history.html">History</a>
+                    <a href="mission.html">Mission</a>
+                    <a href="vision.html">Vision</a>
+                </div>
+            </div>
+
+            <a href="magazine.html">Magazine</a>
+
+            <div class="dropdown">
+                <a href="aboutme.html">About Me</a>
+                <div class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="photoalbum.html">Photo Album</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <span class="dropdown-label">UM</span>
+                <div class="dropdown-content">
+                    <a href="umhistory.html">History</a>
+                    <a href="ummission.html">Mission</a>
+                    <a href="umvision.html">Vision</a>
+                    <a href="ummotto.html">Motto</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <span class="dropdown-label">CS</span>
+                <div class="dropdown-content">
+                    <a href="cshistory.html">CS History</a>
+                    <a href="csmission.html">CS Mission</a>
+                    <a href="csvision.html">CS Vision</a>
+                    <a href="csobjective.html">CS Objective</a>
+                    <a href="csprof.html">CS Prof</a>
+                    <a href="csevent.html">CS Event</a>
+                </div>
+            </div>
+
+            <a href="contact.html">Contact</a>
+            <a href="os.html" class="button">Operating System</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="gallery">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item">
+                <img src="bagapics/b1beefybaga.jpg" alt="Beefy Baga Burger">
+                <p>₱45.00</p>
+                <div class="description">A juicy beef patty with fresh lettuce and tomatoes.</div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item">
+                <img src="bagapics/b3coleslawbaga.png" alt="Coleslaw Baga">
+                <p>₱87.00</p>
+                <div class="description">Crispy beef topped with creamy coleslaw and pickles.</div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item">
+                <img src="bagapics/b4dobolburgercheesybacon.png" alt="Double Cheesy Bacon Burger">
+                <p>₱91.00</p>
+                <div class="description">Double beef patties with extra cheese and crispy bacon.</div>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item">
+                <img src="bagapics/b5doublecheesybaga.png" alt="Double Cheesy Baga">
+                <p>₱65.00</p>
+                <div class="description">Double the cheese and double the flavor!</div>
+            </div>
+
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item">
+                <img src="bagapics/b6bbqbaconbeefybaga with egg.png" alt="BBQ Bacon Baga with Egg">
+                <p>₱110.00</p>
+                <div class="description">Smoky BBQ bacon burger with a fried egg on top.</div>
+            </div>
+
+            <!-- Gallery Item 7 -->
+            <div class="gallery-item">
+                <img src="bagapics/beefloafsandwich.png" alt="Beef Loaf Sandwich">
+                <p>₱20.00</p>
+                <div class="description">A simple but delicious beef loaf sandwich.</div>
+            </div>
+
+            <!-- Gallery Item 8 -->
+            <div class="gallery-item">
+                <img src="bagapics/c2cheesychickencrunch.png" alt="Cheesy Chicken Crunch">
+                <p>₱55.00</p>
+                <div class="description">Crispy chicken fillet with melted cheese.</div>
+            </div>
+
+            <!-- Gallery Item 9 -->
+            <div class="gallery-item">
+                <img src="bagapics/h1hotdogsandwich.png" alt="Hotdog Sandwich">
+                <p>₱40.00</p>
+                <div class="description">Grilled hotdog served with mustard and ketchup.</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="bagapics/b2beefybagacheese.png" alt="Beefy Baga with Cheese">
+                <p>₱55.00</p>
+                <div class="description">Classic beef burger with melted cheese.</div>
+            </div>
+
+           
+        </div>
+    </div>
+    <div class="footer">
+        <p>For More Questions</p>
+        <p><span class="icon">✉</span><a href="mailto:rizadelossantos0714@gmail.com">rizadelossantos0714@gmail.com</a></p>
+        <p><span class="icon">☎</span>09075044166</p>
+        <p><span class="icon">☗</span>16c Rd1, Novaliches, Caloocan, Metro Manila, Philippines.</p>
+        <p>© 2024 BagaBurger. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

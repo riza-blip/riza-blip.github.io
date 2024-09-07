@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(92, 1, 16);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the page takes full height */
+        }
+
+        .header {
+            background-color: white;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown-label {
+            margin: 0 20px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .header nav {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .header img {
+            width: 40px; /* Adjust the size of the logo */
+            height: auto;
+            margin-right: 10px; /* Space between image and "Home" */
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .header a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .content {
+            display: flex;
+            justify-content: center; /* Center align horizontally */
+            align-items: center; /* Center align vertically */
+            flex-grow: 1; /* This expands the content to fill available space */
+            padding: 20px;
+        }
+
+        .text-frame {
+            width: 90%;
+            background-color: rgb(92, 1, 16); /* Light green color */
+            padding: 50px; 
+            box-shadow: 0px 4px 8px rgba(59, 6, 206, 0.2);
+            overflow: auto; /* To handle overflow content */
+            color: white; /* Change text color to ensure readability on light background */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align all elements */
+        }
+
+        .text-frame h1 {
+            text-align: justify;
+            margin-bottom: 20px; /* Space below the heading */
+            font-size: 50px; /* Adjust the size of the heading text */
+        }
+
+        .text-frame p {
+            text-align: justify; /* Center align the paragraphs */
+            margin-bottom: 20px; /* Space between paragraphs */
+            font-size: 20px; /* Adjust the size of the paragraph text */
+            line-height: 1.5; /* Line height to add space between lines */
+            max-width: 600px; /* Limit the width of the text for better readability */
+            text-indent: 30px;
+        }
+
+        .logo {
+            width: 100px; /* Set the logo width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Add space below the logo */
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(243, 7, 7);
+            color: white;
+        }
+
+        /* Show the dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .footer {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            text-align: center; /* Center the content horizontally */
+            margin-top: auto; /* Ensure the footer stays at the bottom */
+            width: 100%; /* Ensure the footer spans the full width */
+            box-sizing: border-box; /* Ensures padding doesn't affect the width */
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .footer .icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+            <img src="bagapics/logobaga.png" alt="Baga Burger Logo">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+
+            <!-- Dropdown for Business (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">Business</span>
+                <div class="dropdown-content">
+                    <a href="history.html">History</a>
+                    <a href="mission.html">Mission</a>
+                    <a href="vision.html">Vision</a>
+                </div>
+            </div>
+
+            <a href="magazine.html">Magazine</a>
+
+            <!-- Dropdown for About Me -->
+            <div class="dropdown">
+                <a href="aboutme.html">About Me</a>
+                <div class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="photoalbum.html">Photo Album</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for UM (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">UM</span>
+                <div class="dropdown-content">
+                    <a href="umhistory.html">History</a>
+                    <a href="ummission.html">Mission</a>
+                    <a href="umvision.html">Vision</a>
+                    <a href="ummotto.html">Motto</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for CS (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">CS</span>
+                <div class="dropdown-content">
+                    <a href="cshistory.html">CS History</a>
+                    <a href="csmission.html">CS Mission</a>
+                    <a href="csvision.html">CS Vision</a>
+                    <a href="csobjective.html">CS Objective</a>
+                    <a href="csprof.html">CS Prof</a>
+                    <a href="csevent.html">CS Event</a>
+                </div>
+            </div>
+
+            <a href="contact.html">Contact</a>
+            <a href="os.html" class="button">Operating System</a>
+        </nav>
+    </div>
+
+
+    <div class="content">
+        <div class="text-frame">
+            <!-- Centered Logo -->
+            <img src="bagapics/umlogo.jpg" alt="UM Logo" class="logo">
+            <h1>UM VISION</h1>
+            <p>TO IMPART TO THE FUTURE GENERATIONS THE UNIVERSITY OF MANILA TRILOGY OF IDEALS: LOVE OF COUNTRY, LOVE OF SCIENCE AND LOVE OF VIRTUE, IN MAKING THE LIVES OF OTHERS BETTER, BRIGHTER, LIGHTER, AND MORE LIVEABLE BY MAKING QUALITY EDUCATION ACCESSIBLE TO ALL.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>For More Questions</p>
+        <p><span class="icon">✉</span><a href="mailto:umregister@yahoo.com">umregister@yahoo.com</a></p>
+        <p><span class="icon">☎</span>09075044166</p>
+        <p><span class="icon">☗</span>546 Delos Santos St, 403, Manila,1008 Metro Manila, Philippines.</p>
+        <p>© 2024 University of Manila. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>

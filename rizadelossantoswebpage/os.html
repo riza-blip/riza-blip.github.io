@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating Systems</title>
+    <style>
+        html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+        .header {
+            background-color: white;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+        .header {
+            background-color: white;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .header a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        
+        .text-content {
+            width: 50%;
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(243, 7, 7);
+            color: white;
+        }
+
+        /* Show the dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-label {
+            margin: 0 20px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .header a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .os-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .os {
+            background-color: white;
+            color: black;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .os img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .os h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .os p {
+            text-align: justify;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .footer .icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+            <img src="bagapics/logobaga.png" alt="Baga Burger Logo">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+
+            <!-- Dropdown for Business (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">Business</span>
+                <div class="dropdown-content">
+                    <a href="history.html">History</a>
+                    <a href="mission.html">Mission</a>
+                    <a href="vision.html">Vision</a>
+                </div>
+            </div>
+
+            <a href="magazine.html">Magazine</a>
+
+            <!-- Dropdown for About Me -->
+            <div class="dropdown">
+                <a href="aboutme.html">About Me</a>
+                <div class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="photoalbum.html">Photo Album</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for UM (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">UM</span>
+                <div class="dropdown-content">
+                    <a href="umhistory.html">History</a>
+                    <a href="ummission.html">Mission</a>
+                    <a href="umvision.html">Vision</a>
+                    <a href="ummotto.html">Motto</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for CS (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">CS</span>
+                <div class="dropdown-content">
+                    <a href="cshistory.html">CS History</a>
+                    <a href="csmission.html">CS Mission</a>
+                    <a href="csvision.html">CS Vision</a>
+                    <a href="csobjective.html">CS Objective</a>
+                    <a href="csprof.html">CS Prof</a>
+                    <a href="csevent.html">CS Event</a>
+                </div>
+            </div>
+
+            <a href="contact.html">Contact</a>
+            <a href="os.html" class="button">Operating System</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h1></h1>
+        <div class="os-container">
+            <!-- Windows -->
+            <div class="os">
+                <img src="webpics/windows.png" alt="Windows">
+                <h2>Windows</h2>
+                <p>Windows is a series of operating systems developed by Microsoft. It is known for its user-friendly interface and compatibility with a wide range of software applications.</p>
+            </div>
+
+            <!-- Mac OS -->
+            <div class="os">
+                <img src="webpics/mac os.jpg" alt="Mac OS">
+                <h2>Mac OS</h2>
+                <p>Mac OS, developed by Apple Inc., is known for its sleek interface and integration with Apple’s ecosystem of devices. It is popular among creative professionals for its robust performance and stability.</p>
+            </div>
+
+            <!-- Linux -->
+            <div class="os">
+                <img src="webpics/linux.png" alt="Linux">
+                <h2>Linux</h2>
+                <p>Linux is an open-source operating system that is known for its flexibility and security. It is widely used in server environments and is favored by developers and tech enthusiasts for its customization options.</p>
+            </div>
+
+            <!-- iOS -->
+            <div class="os">
+                <img src="webpics/ios.png" alt="iOS">
+                <h2>iOS</h2>
+                <p>iOS is Apple's mobile operating system, designed exclusively for iPhone and iPad devices. It is known for its smooth performance, intuitive user interface, and tight integration with the Apple ecosystem.</p>
+            </div>
+
+            <!-- Android -->
+            <div class="os">
+                <img src="webpics/android.png" alt="Android">
+                <h2>Android</h2>
+                <p>Android, developed by Google, is a versatile operating system used in a variety of devices, including smartphones and tablets. It offers a customizable user experience and a large selection of applications through the Google Play Store.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>For More Questions</p>
+        <p><span class="icon">✉</span><a href="mailto:rizadelossantos0714@gmail.com">rizadelossantos0714@gmail.com</a></p>
+        <p><span class="icon">☎</span>09075044166</p>
+        <p><span class="icon">☗</span>16c Rd1, Novaliches, Caloocan, Metro Manila, Philippines.</p>
+        <p>© 2024 BagaBurger. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

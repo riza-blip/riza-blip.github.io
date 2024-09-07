@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        background-color: rgb(189, 4, 4);
+        background-image: url('bagapics/bagahis.png'); /* Path to your background image */
+        background-size: 80% 100%;
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Ensure the image doesn’t repeat */
+        color: white;
+    }
+
+        .header {
+            background-color: white;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header nav {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .header img {
+            width: 40px; /* Set width */
+            height: 40px; /* Set height */
+            margin-right: 10px; /* Space between image and "Home" */
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .header a:hover {
+            color: rgb(243, 7, 7);
+        }
+        .dropdown-label {
+            margin: 0 20px;
+            font-weight: bold;
+            color: black;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .text-content {
+            width: 50%;
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(243, 7, 7);
+            color: white;
+        }
+
+        /* Show the dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .mission {
+            background-color: rgb(248, 244, 244);
+            color: rgb(3, 0, 0);
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .mission h1 {
+            color: rgb(243, 7, 7);
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .mission p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            text-align: justify; /* Justify the text */
+            text-justify: inter-word; /* Ensure spacing is applied properly */
+        }
+        .footer {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .footer .icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+            <img src="bagapics/logobaga.png" alt="Baga Burger Logo">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+
+            <!-- Dropdown for Business (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">Business</span>
+                <div class="dropdown-content">
+                    <a href="history.html">History</a>
+                    <a href="mission.html">Mission</a>
+                    <a href="vision.html">Vision</a>
+                </div>
+            </div>
+
+            <a href="magazine.html">Magazine</a>
+
+            <!-- Dropdown for About Me -->
+            <div class="dropdown">
+                <a href="aboutme.html">About Me</a>
+                <div class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="photoalbum.html">Photo Album</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for UM (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">UM</span>
+                <div class="dropdown-content">
+                    <a href="umhistory.html">History</a>
+                    <a href="ummission.html">Mission</a>
+                    <a href="umvision.html">Vision</a>
+                    <a href="ummotto.html">Motto</a>
+                </div>
+            </div>
+
+            <!-- Dropdown for CS (Non-clickable) -->
+            <div class="dropdown">
+                <span class="dropdown-label">CS</span>
+                <div class="dropdown-content">
+                    <a href="cshistory.html">CS History</a>
+                    <a href="csmission.html">CS Mission</a>
+                    <a href="csvision.html">CS Vision</a>
+                    <a href="csobjective.html">CS Objective</a>
+                    <a href="csprof.html">CS Prof</a>
+                    <a href="csevent.html">CS Event</a>
+                </div>
+            </div>
+
+            <a href="contact.html">Contact</a>
+            <a href="os.html" class="button">Operating System</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="mission">
+            <h1>Baga Burger History</h1>
+            <p>Baga Burger, the first and only Buy 1, Take 1 grilled burger in the Philippines, was founded in Baliuag, Bulacan. Known for its delicious, flame-grilled patties, Baga Burger quickly gained popularity for its unique offering of grilled burgers at a great value. With its tasty and affordable menu, it has expanded beyond Baliuag and now boasts more than 10 franchise branches across the country. Baga Burger has become a beloved local favorite, offering Filipinos an irresistible combination of quality and value in every bite.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>For More Questions</p>
+        <p><span class="icon">✉</span><a href="mailto:rizadelossantos0714@gmail.com">rizadelossantos0714@gmail.com</a></p>
+        <p><span class="icon">☎</span>09075044166</p>
+        <p><span class="icon">☗</span>16c Rd1, Novaliches, Caloocan, Metro Manila, Philippines.</p>
+        <p>© 2024 BagaBurger. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

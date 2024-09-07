@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(218, 171, 171);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            background-color: white;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header nav {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .header img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .header a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .text-content {
+            width: 100%;
+        }
+
+        .text-content h1 {
+            font-size: 36px;
+        }
+
+        .text-content p {
+            font-size: 18px;
+        }
+
+        /* Increase font size for contact details */
+        .text-content p a,
+        .text-content p {
+            font-size: 24px; /* Adjust to your desired size */
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(243, 7, 7);
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-label {
+            margin: 0 20px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .footer {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: rgb(243, 7, 7);
+        }
+
+        .footer .icon {
+            margin-right: 5px;
+        }
+
+        /* Increase font size for social icons */
+        .social-icons a {
+            font-size: 30px; /* Adjust to your desired size */
+            text-decoration: none;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .footer .maps {
+            margin: 20px 0;
+        }
+
+        .footer .maps img {
+            height: 11cm;
+            width: auto;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <img src="bagapics/logobaga.png" alt="Baga Burger Logo">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <div class="dropdown">
+                <span class="dropdown-label">Business</span>
+                <div class="dropdown-content">
+                    <a href="history.html">History</a>
+                    <a href="mission.html">Mission</a>
+                    <a href="vision.html">Vision</a>
+                </div>
+            </div>
+            <a href="magazine.html">Magazine</a>
+            <div class="dropdown">
+                <a href="aboutme.html">About Me</a>
+                <div class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="photoalbum.html">Photo Album</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <span class="dropdown-label">UM</span>
+                <div class="dropdown-content">
+                    <a href="umhistory.html">History</a>
+                    <a href="ummission.html">Mission</a>
+                    <a href="umvision.html">Vision</a>
+                    <a href="ummotto.html">Motto</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <span class="dropdown-label">CS</span>
+                <div class="dropdown-content">
+                    <a href="cshistory.html">CS History</a>
+                    <a href="csmission.html">CS Mission</a>
+                    <a href="csvision.html">CS Vision</a>
+                    <a href="csobjective.html">CS Objective</a>
+                    <a href="csprof.html">CS Prof</a>
+                    <a href="csevent.html">CS Event</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+            <a href="os.html" class="button">Operating System</a>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="text-content">
+            <h1>Contact Information</h1>
+            <p><span class="icon">✉</span><a href="mailto:rizadelossantos0714@gmail.com">rizadelossantos0714@gmail.com</a></p>
+            <p><span class="icon">☎</span>09075044166</p>
+            
+            <div class="social-icons">
+                <a href="https://www.facebook.com/riza.077?mibextid=ZbWKwL" target="_blank">🔵 Facebook</a>
+                <a href="https://www.instagram.com/_rizxcsz?igsh=eG00ZGlwdjQwanZu" target="_blank">📸 Instagram</a>
+                <a href="" target="_blank"> </a>
+            </div>
+            <p><span class="icon">☗</span>16c Rd1, Novaliches, Caloocan, Metro Manila, Philippines.</p>
+            <div class="maps">
+                <img src="webpics/map.jpg" alt="Map of Location">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>For More Questions</p>
+        <p><span class="icon">✉</span><a href="mailto:rizadelossantos0714@gmail.com">rizadelossantos0714@gmail.com</a></p>
+        <p><span class="icon">☎</span>09075044166</p>
+        <p><span class="icon">☗</span>16c Rd1, Novaliches, Caloocan, Metro Manila, Philippines.</p>
+        <p>© 2024 BagaBurger. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
